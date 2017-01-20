@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaguwa.Network", "Kaguwa.Network\Kaguwa.Network.csproj", "{100D5477-EC53-4834-B013-DA5C9818158D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaguwa.Network.Tests", "Kaguwa.Network.Tests\Kaguwa.Network.Tests.csproj", "{DCECAE20-0E1F-4811-A754-DD23E7B91EC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{100D5477-EC53-4834-B013-DA5C9818158D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100D5477-EC53-4834-B013-DA5C9818158D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100D5477-EC53-4834-B013-DA5C9818158D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100D5477-EC53-4834-B013-DA5C9818158D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCECAE20-0E1F-4811-A754-DD23E7B91EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCECAE20-0E1F-4811-A754-DD23E7B91EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCECAE20-0E1F-4811-A754-DD23E7B91EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCECAE20-0E1F-4811-A754-DD23E7B91EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
