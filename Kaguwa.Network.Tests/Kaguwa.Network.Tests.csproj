@@ -61,6 +61,7 @@
     <Compile Include="ComponentTests.cs" />
     <Compile Include="IPHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DnsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kaguwa.Network\Kaguwa.Network.csproj">
