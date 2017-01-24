@@ -42,10 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dns.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="IPHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structs\Structs.cs" />
+    <Compile Include="Types\Host.cs" />
     <Compile Include="Types\NetworkConnection.cs" />
     <Compile Include="Types\TcpConnection.cs" />
     <Compile Include="Types\UdpConnection.cs" />
