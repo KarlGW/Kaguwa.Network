@@ -39,17 +39,17 @@
     // enum for the different states of a connection.
     public enum MibTcpState
     {
-        CLOSED = 1,
-        LISTENING = 2,
-        SYN_SENT = 3,
-        ESTABLISHED = 5,
-        FIN_WAIT1 = 6,
-        FIN_WAOT2 = 7,
-        CLOSE_WAIT = 8,
-        CLOSING = 9,
-        LAST_ACK = 10,
-        TIME_WAIT = 11,
-        DELETE_TCP = 12,
-        NONE = 0
+        Closed = 1,
+        Listening = 2,
+        Syn_Sent = 3,
+        Established = 5,
+        Fin_Wait1 = 6,
+        Fin_Wait2 = 7,
+        Close_Wait = 8,
+        Closing = 9,
+        Last_Ack = 10,
+        Time_Wait = 11,
+        Delete_TCP = 12,
+        None = 0
     }
 }
