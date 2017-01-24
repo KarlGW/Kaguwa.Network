@@ -3,6 +3,7 @@ using System.Net;
 using Kaguwa.Network.Enums;
 using Kaguwa.Network.Types;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Kaguwa.Network.Tests
 {
@@ -73,6 +74,28 @@ namespace Kaguwa.Network.Tests
             Assert.AreEqual(2222, connection1.LocalPort);
             Assert.AreEqual(existingPid, connection1.ProcessId);
             Assert.AreEqual(existingProcessName, connection2.ProcessName);
+        }
+
+        /// <summary>
+        /// Tests the creationg of a Host object.
+        /// </summary>
+        [TestMethod]
+        public void CreateHost()
+        {
+            // Create a Host object with an IPAddress as constructor argument.
+            IPAddress ipAddr = IPAddress.Parse("192.168.0.10");
+            var host1 = new Host("goliath", ipAddr);
+
+            // See if it received the correct values for HostName and IPAddress.
+            Assert.AreEqual("goliath", host1.HostName);
+            Assert.AreEqual(ipAddr, host1.IPAddress);
+
+            // Create a HOst object with string as a constructor argument.
+            var host2 = new Host("goliath", "192.168.0.10");
+
+            // See if it received the correct values for HostName and IPAddress.
+            Assert.AreEqual("goliath", host2.HostName);
+            Assert.AreEqual(ipAddr, host2.IPAddress);
         }
     }
 }
