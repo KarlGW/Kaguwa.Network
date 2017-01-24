@@ -27,18 +27,18 @@ namespace Kaguwa.Network.Tests
             TcpConnection connection1 = new TcpConnection(Protocol.TCP,
                                                          new IPAddress(new byte[] { 192, 168, 1, 1 }),
                                                          new IPAddress(new byte[] { 192, 168, 10, 1 }),
-                                                         2222, 2222, existingPid, MibTcpState.ESTABLISHED);
+                                                         2222, 2222, existingPid, MibTcpState.Established);
 
             // Create a TcpConnection with processes.
             TcpConnection connection2 = new TcpConnection(Protocol.TCP,
                                              new IPAddress(new byte[] { 192, 168, 1, 1 }),
                                              new IPAddress(new byte[] { 192, 168, 10, 1 }),
-                                             2222, 2222, existingPid, MibTcpState.ESTABLISHED,
+                                             2222, 2222, existingPid, MibTcpState.Established,
                                              processes);
 
 
             // Test all the properties on the TcpConnection object.
-            Assert.AreEqual("ESTABLISHED", connection1.State.ToString());
+            Assert.AreEqual("Established", connection1.State.ToString());
             Assert.AreEqual("192.168.1.1", connection1.LocalAddress.ToString());
             Assert.AreEqual("192.168.10.1", connection1.RemoteAddress.ToString());
             Assert.AreEqual(2222, connection1.LocalPort);
