@@ -8,7 +8,7 @@ using System.Net;
 namespace Kaguwa.Network.Types
 {
     /// <summary>
-    /// A Host object. Contains a  HostName and an IPAddress.
+    /// A Host object. Contains a HostName and an IPAddress.
     /// </summary>
     public class Host
     {
