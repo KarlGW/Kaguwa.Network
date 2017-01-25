@@ -27,23 +27,44 @@ Include it in a library of your choice.
 ####Methods
 
 This class provides two static methods. `GetTcpConnections()` and `GetUdpConnections()`.
+They return a `List<TcpConnection>` and `List<UdpConnection>` respectivley.
 
 ```
 Process[] processes = Process.GetProcesses();
 
 To get all TCPv4 connections:
-var connections = IPHelper.GetTcpConnections(IPVersion.IPv4, processes);
+var connections = Kaguwa.Network.IPHelper.GetTcpConnections(IPVersion.IPv4, processes);
 
 To get all TCPv6 connections:
-var connections = IPHelper.GetTcpConnections(IPVersion.IPv6, processes);
+var connections = Kaguwa.Network.IPHelper.GetTcpConnections(IPVersion.IPv6, processes);
 
 To get all UDPv4 connections:
-var connections = IPHelper.GetUdpConnections(IPVersion.IPv4, processes);
+var connections = Kaguwa.Network.IPHelper.GetUdpConnections(IPVersion.IPv4, processes);
 
 To get all UDPv6 connections:
-var connections = IPHelper.GetUdpConnections(IPVersion.IPv6, processes);
+var connections = Kaguwa.Network.IPHelper.GetUdpConnections(IPVersion.IPv6, processes);
 
 ```
+
+###Dns
+
+This class provides a static method. `GetHost()`.
+It returns a `Kaguwa.Network.Types.Host` object.
+
+####Meethods
+
+This class provides a static method, `GetHost()`.
+
+```
+To get host entry by host name:
+var host = Kaguwa.Network.Dns.GetHost("MyMachineName");
+
+To get host entry by IPv4 Address:
+var host = Kaguwa.Network.Dns.GetHost("192.168.0.10");
+```
+
+###Host
+Class that represents a host entry. Has properties `HostName` and `IPAddress`.
 
 ###NetworkConnection
 Abstract class to represent network connections.
@@ -100,6 +121,13 @@ Enum that represents UDP tables.
 Enum that represents TCP states.
 
 ##Updates and verions
+
+###0.2.6234.2785
+Added new features.
+
+* `Kaguwa.Network.Types.Host` represents a host entry on a local, or remote machine.
+* `Kaguwa.Network.Dns` with static method `GetHost()` which is used to query a hostname for an IP Address, and an IP Address for a host name.
+* Unit testing for both.
 
 ###0.1.6233.37253
 Changed MibTcpState to use uppercase in first letter only.
