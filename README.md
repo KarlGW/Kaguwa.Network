@@ -122,6 +122,9 @@ Enum that represents TCP states.
 
 ##Updates and verions
 
+###0.2.5241.42965
+* Added try/catch when getting host entry to handle when host could not be found or reached.
+
 ###0.2.6234.2785
 Added new features.
 
