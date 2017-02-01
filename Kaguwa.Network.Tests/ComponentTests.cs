@@ -3,7 +3,6 @@ using System.Net;
 using Kaguwa.Network.Enums;
 using Kaguwa.Network.Types;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace Kaguwa.Network.Tests
 {
