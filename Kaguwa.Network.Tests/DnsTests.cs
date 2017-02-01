@@ -1,7 +1,7 @@
-﻿using System;
+﻿using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Kaguwa.Network.Types;
-using System.Net;
+
 
 namespace Kaguwa.Network.Tests
 {
@@ -25,6 +25,10 @@ namespace Kaguwa.Network.Tests
             Host host2 = Dns.GetHost("192.168.0.10");
             Assert.AreEqual(expectedName, host2.HostName);
             Assert.AreEqual(IPAddress.Parse(expectedIpAddr), host2.IPAddress);
+
+            Host host3 = Dns.GetHost("0.0.0.0");
+            Assert.AreEqual("IPv4 address 0.0.0.0 and IPv6 address ::0 cannot be used.", host3.HostName);
+            Assert.AreEqual(null, host3.IPAddress);
         }
     }
 }
