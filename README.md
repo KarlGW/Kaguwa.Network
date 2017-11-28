@@ -1,8 +1,8 @@
-#Kaguwa.Network
+# Kaguwa.Network
 
 A library containing network related classes.
 
-##About
+## About
 
 This library has Classes, Structs, and Enums that handles networking. At the time of this writing it's primary
 function is to provide the class `Kaguwa.Network.IPHelper` that utilizez the IPHelper API (`iphlpapi.dll`) to
@@ -10,7 +10,7 @@ query the system on active TCP/UDP connections and return them with the `iphlpap
 
 `GetExtendedTcpTable()` and `GetExtendedUdpTable()`.
 
-##Build
+## Build
 
 Clone the repository to your system.
 
@@ -20,11 +20,11 @@ Open it in Visual Studio and build the solution.
 
 Include it in a library of your choice.
 
-##Classes
+## Classes
 
-###IPHelper
+### IPHelper
 
-####Methods
+#### Methods
 
 This class provides two static methods. `GetTcpConnections()` and `GetUdpConnections()`.
 They return a `List<TcpConnection>` and `List<UdpConnection>` respectivley.
@@ -46,12 +46,12 @@ var connections = Kaguwa.Network.IPHelper.GetUdpConnections(IPVersion.IPv6, proc
 
 ```
 
-###Dns
+### Dns
 
 This class provides a static method. `GetHost()`.
 It returns a `Kaguwa.Network.Types.Host` object.
 
-####Meethods
+#### Methods
 
 This class provides a static method, `GetHost()`.
 
@@ -63,77 +63,77 @@ To get host entry by IPv4 Address:
 var host = Kaguwa.Network.Dns.GetHost("192.168.0.10");
 ```
 
-###Host
+### Host
 Class that represents a host entry. Has properties `HostName` and `IPAddress`.
 
-###NetworkConnection
+### NetworkConnection
 Abstract class to represent network connections.
 
-###TcpConnection
+### TcpConnection
 Subclass of NetworkConnections. Represents TCP connections.
 
-###UdpConnection
+### UdpConnection
 Subclass of NetworkConnections. Represents UDP connections.
 
-##Structs
+## Structs
 
-###MIB_TCPROW_OWNER_PID
+### MIB_TCPROW_OWNER_PID
 Struct that represents TCP connections.
 
-###MIB_TCPTABLE_OWNER_PID
+### MIB_TCPTABLE_OWNER_PID
 Struct to hold `MIB_TCPROW_OWNER_PID` entries.
 
-###MIB_TCP6ROW_OWNER_PID
+### MIB_TCP6ROW_OWNER_PID
 Struct that represent TCP (IPv6) connections.
 
-###MIB_TCP6TABLE_OWNER_PID
+### MIB_TCP6TABLE_OWNER_PID
 Struct to hold `MIB_TCP6ROW_OWNER_PID` entries.
 
-###MIB_UDPROW_OWNER_PID
+### MIB_UDPROW_OWNER_PID
 Struct that represents UDP connections.
 
-###MIB_UDPTABLE_OWNER_PID
+### MIB_UDPTABLE_OWNER_PID
 Struct to hold `MIB_UDPROW_OWNER_PID` entries.
 
-###MIB_UDP6ROW_OWNER_PID
+### MIB_UDP6ROW_OWNER_PID
 Struct that represents UDP (IPv6) connections.
 
-###MIB_UDP6TABLE_OWNER_PID
+### MIB_UDP6TABLE_OWNER_PID
 Struct to hold `MIB_UDP6ROW_OWNER_PID` entries.
 
 
-##Enums
+## Enums
 Enumerations used by the classes.
 
-###Protocol
+### Protocol
 Enum to represent TCP and UDP connections.
 
-###IPVersion
+### IPVersion
 Enum to represent IP versions, IPv4 and IPv6.
 
-###TcpTableClass
+### TcpTableClass
 Enum that represents TCP tables.
 
-###UdpTableClass
+### UdpTableClass
 Enum that represents UDP tables.
 
-###MibTcpState
+### MibTcpState
 Enum that represents TCP states.
 
-##Updates and verions
+## Updates and verions
 
-###0.2.5241.42965
+### 0.2.5241.42965
 * Added try/catch when getting host entry to handle when host could not be found or reached.
 
-###0.2.6234.2785
+### 0.2.6234.2785
 Added new features.
 
 * `Kaguwa.Network.Types.Host` represents a host entry on a local, or remote machine.
 * `Kaguwa.Network.Dns` with static method `GetHost()` which is used to query a hostname for an IP Address, and an IP Address for a host name.
 * Unit testing for both.
 
-###0.1.6233.37253
+### 0.1.6233.37253
 Changed MibTcpState to use uppercase in first letter only.
 
-###0.1.6229.38178
+### 0.1.6229.38178
 First used version.
